@@ -1,0 +1,43 @@
+body{
+    background-color: yellow;
+}
+
+@font-face{
+    font-family: "LCD";
+    src: url('lcd/LCD-N___.TTF');
+}
+
+.numbers, .base10{
+    font-family: "LCD";
+    font-size: 90px;
+    color: rgb(0, 255, 65);
+}
+
+table{
+    margin: 0 auto;
+    border: 6px solid black;
+    background-color: black;
+}
+
+td{
+    padding: 45px;
+    background-color: white;
+    border: 4px solid black;
+}
+
+button{
+    text-align: center;
+}
+
+.coin-flipping{
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family: "LCD";
+    font-size: 48px;
+    text-align: center;
+}

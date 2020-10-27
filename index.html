@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='index.css'>
+        <title>Ones, Zeros & Odds!</title>
+        <script src='index.js'></script>
+    </head>
+    <body>
+        <p>Welcome to Ones, Zeros and Odds! A game where you generate a random binary number based on the flip of a coin. If you get past a 
+            certain number, you will get some amount of money. [MAKE SURE TO GO OVER WHAT THE USER CAN WIN!]
+        </p>
+        <table class="numbers">
+            <tr>
+                <td id="2^7">0</td>
+                <td id="2^6">0</td>
+                <td id="2^5">0</td>
+                <td id="2^4">0</td>
+                <td id="2^3">0</td>
+                <td id="2^2">0</td>
+                <td id="2^1">0</td>
+                <td id="2^0">0</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <div class="coin-flipping">
+            <textarea id="coin-display" name="coin-display" rows="1" cols="10" readonly></textarea><br>
+            <button onclick="flipCoin()" id="flipButton">Click me to flip the coin!</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <!--This is where the base 10 value will be displayed-->
+        <table class="base10">
+            <td id="hundreds">0</td>
+            <td id="tens">0</td>
+            <td id="ones">0</td>
+        </table>
+        <p id="basetensum">0</p>
+    </body>
+</html>
