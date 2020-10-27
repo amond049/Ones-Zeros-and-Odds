@@ -37,9 +37,8 @@ function display(){
     document.getElementById("flipButton").disabled = false;
 
     // This is where the number is assigned, make sure to check over this one
-    if (value < 6){ // USED TO BE 7, TRYING OUT 6 TO SEE IF THE VALUES WILL WORK
-        changeValue(sideDisplay);
-    } else {
+    changeValue(sideDisplay);
+    if (value > 6){
         // Deal with when it is greater than 7
         document.getElementById("flipButton").disabled = true;
     }
@@ -53,7 +52,7 @@ function changeValue(side){
         basetensum += Math.pow(2, (value + 1));
         // Getting the 100s value
         let hundredsValue = Math.floor(basetensum / 100);
-        let tensValue = Math.floor(basetensum / 10);
+        let tensValue = Math.floor((basetensum - hundredsValue * 10) / 10);
         let onesValue = basetensum % 10;
 
         document.getElementById("hundreds").innerHTML = hundredsValue;
