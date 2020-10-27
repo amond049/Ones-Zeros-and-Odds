@@ -1,7 +1,9 @@
+// Declaring some global variables 
 var headsOrTails;
 var value = -1;
 var basetensum = 0;
 
+// Simulating the coin flip
 function flipCoin(){
     headsOrTails = Math.floor(Math.random() * 2) + 1;
     document.getElementById("coin-display").innerHTML = "Flipping";
@@ -27,6 +29,7 @@ function flip3(){
     document.getElementById("coin-display").innerHTML = "Flipping...";
 }
 
+// Displaying whether or not it landed on heads or tails, then calling up the appropriate methods based upon what it landed on
 function display(){
     // Using a ternary function to check which side the "coin landed on"
     let sideDisplay = headsOrTails == 1 ? "Heads!" : "Tails!";
@@ -42,13 +45,12 @@ function display(){
     }
 }
 
-// Need to make sure that value is less than 8 before you run this
+// Changing the value in both the binary display and the base 10 display
 function changeValue(side){
     var heads = side == "Heads!";
     if (heads){
         document.getElementById("2^" + (value + 1)).innerHTML = 1;
         basetensum += Math.pow(2, (value + 1));
-        // Mod 1000, 100, 10 to get each value
         // Getting the 100s value
         let hundredsValue = Math.floor(basetensum / 100);
         let tensValue = Math.floor(basetensum / 10);
@@ -62,8 +64,4 @@ function changeValue(side){
     }
 
     value += 1;
-    console.log(value);
 }
-
-// Now I need to work out how to check if each cell is empty or not
-// Maybe do a for loop starting at 2^0? Check if cell is empty, if empty, assign either 1 or 0, if not empty, keep going
