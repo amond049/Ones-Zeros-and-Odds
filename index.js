@@ -52,7 +52,7 @@ function changeValue(side){
         basetensum += Math.pow(2, (value + 1));
         // Getting the 100s value
         let hundredsValue = Math.floor(basetensum / 100);
-        let tensValue = Math.floor((basetensum - hundredsValue * 10) / 10);
+        let tensValue = Math.floor((basetensum - hundredsValue * 100) / 10);
         let onesValue = basetensum % 10;
 
         document.getElementById("hundreds").innerHTML = hundredsValue;
