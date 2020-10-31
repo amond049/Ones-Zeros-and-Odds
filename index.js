@@ -41,6 +41,7 @@ function display(){
     if (value > 6){
         // Deal with when it is greater than 7
         document.getElementById("flipButton").disabled = true;
+        checkWin();
     }
 }
 
@@ -63,4 +64,14 @@ function changeValue(side){
     }
 
     value += 1;
+}
+
+function checkWin(){
+    if (basetensum < 140){
+        alert("You lose!");
+    } else if (basetensum > 174){
+        alert("You win $2.00!");
+    } else {
+        alert("You get $1.00!");
+    }
 }
