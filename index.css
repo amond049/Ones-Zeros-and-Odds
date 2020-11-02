@@ -1,38 +1,59 @@
+/*Editing the attributes of the body of the webpage*/
 body{
     background-color: yellow;
+    margin: 0 auto;
+    font-family: "Arial";
 }
 
+/*Creating a font face that will be used, an LCD font, similar to that of a digital clock*/
 @font-face{
     font-family: "LCD";
     src: url('lcd/LCD-N___.TTF');
 }
 
+/*Setting the attributes for the numbers and base10 class*/
 .numbers, .base10{
     font-family: "LCD";
     font-size: 90px;
     color: rgb(0, 255, 65);
 }
 
+/*Setting the attributes for the tables on the page*/
 table{
     margin: 0 auto;
     border: 6px solid black;
     background-color: black;
 }
 
+/*Setting the attributes for the table data*/
 td{
     padding: 45px;
     background-color: white;
     border: 4px solid black;
 }
 
+/*Setting the attributes for the buttons on the webpage*/
 button{
     text-align: center;
+    padding: 15px 5px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 8px;
 }
 
+/*Setting the attributes for when you hover over the button*/
+button:hover{
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+/*Setting the attributes for the coin flipping class on the webpage*/
 .coin-flipping{
     text-align: center;
 }
 
+/*Setting the attributes for the textareas on the webpage*/
 textarea{
     resize: none;
     border: 1px solid black;
@@ -40,4 +61,45 @@ textarea{
     font-family: "LCD";
     font-size: 48px;
     text-align: center;
+}
+
+/* Portions of the webpage dedicated to UI*/
+
+/*Setting the attributes for the intro, description and howtoplay classes*/
+.intro, .description, .howtoplay{
+    width: 90%;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*Setting the intro specific attributes*/
+.intro{
+    font-size: 64px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+/*Setting the description and howtoplay specific attributes*/
+.description, .howtoplay{
+    border: 1px solid black;
+    background-color: white;
+}
+
+/*Setting the <p> elements in both the description and how to play class' attributes*/
+.description p, .howtoplay p{
+    padding: 20px 0;
+}
+
+/*Setting the <h1> elements in both the description and how to play class' attributes*/
+.description h1, .howtoplay h1{
+    color: yellow;
+    background-color: black;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/*Setting the colour of the first label, setting it to red so that the player knows where they are starting*/
+#label0{
+    background-color: red;
 }
