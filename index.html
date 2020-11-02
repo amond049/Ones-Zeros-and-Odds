@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
+    <!--The head of the webpage, setting the title and connections with any necessary files-->
     <head>
         <link rel='stylesheet' type='text/css' href='index.css'>
         <title>Ones, Zeros & Odds!</title>
         <script src='index.js'></script>
     </head>
     <body>
-        <p>Welcome to Ones, Zeros and Odds! A game where you generate a random binary number based on the flip of a coin. If you get past a 
-            certain number, you will get some amount of money. [MAKE SURE TO GO OVER WHAT THE USER CAN WIN!]
-        </p>
+        <!--This class is a brief intro to the game-->
+        <div class="intro">
+            <p>Welcome to Ones, Zeros & Odds!</p>
+        </div>
+        <!--This class provides a brief description as to what the game actually is->
+        <div class='description'>
+            <h1>What is Ones, Zeros & Odds?</h1>
+            <p>Ones, Zeros & Odds is a game where the player can truly test their luck with a coin. The player works their way from right to left
+               flipping a coin at each binary position to determine whether or not the number becomes a 1 or 0. 
+            </p>
+        </div>
+        <br><br><br>
+        
+        <!--This class provides a quick how to play for the user-->
+        <div class="howtoplay">
+            <h1>How to play?</h1>
+            <p>You need to pay $1.00 in order to play (of course I have no way of enforcing this, don't tell anyone!) and then you can go ham with
+                flipping the coin. If your final number is less than 140, you get no money back! If your final value is between 140 and 174 
+                (inclusive), you get your initial fee, and if you get 175 or above, you struck the jackpot, you get twice your money back!<br>
+                <br>The red square above each number is meant to represent the position you are flipping the coin for!</p>
+        </div>
+        <br><br><br>
         <table class="numbers">
+            <tr>
+                <td id="label7"></td>
+                <td id="label6"></td>
+                <td id="label5"></td>
+                <td id="label4"></td>
+                <td id="label3"></td>
+                <td id="label2"></td>
+                <td id="label1"></td>
+                <td id="label0"></td>
+            </tr>
             <tr>
                 <td id="2^7">0</td>
                 <td id="2^6">0</td>
@@ -25,7 +55,7 @@
         <br>
         <br>
         <div class="coin-flipping">
-            <textarea id="coin-display" name="coin-display" rows="1" cols="10" readonly></textarea><br>
+            <textarea id="coin-display" name="coin-display" rows="1" cols="20" readonly></textarea><br>
             <button onclick="flipCoin()" id="flipButton">Click me to flip the coin!</button>
         </div>
 
@@ -38,6 +68,5 @@
             <td id="tens">0</td>
             <td id="ones">0</td>
         </table>
-        <p id="basetensum">0</p>
     </body>
 </html>
